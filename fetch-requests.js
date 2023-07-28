@@ -9,7 +9,8 @@ Paste your code for fetch requests here once you finish each task.
   components to the console.
 */
 
-// Your code here
+
+
 
 
 
@@ -19,4 +20,14 @@ Paste your code for fetch requests here once you finish each task.
   components to the console.
 */
 
-// Your code here
+fetch("/posts", {
+
+  method: "post",
+  headers: {
+    "COntent-Type": "application/json"
+  },
+  body: JSON.stringify({
+    message: "this is our message. Lets goooooo"
+  })
+}).then((res) => res.json())
+.then((data) => console.log(data))
